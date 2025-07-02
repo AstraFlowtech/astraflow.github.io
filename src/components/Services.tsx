@@ -1,10 +1,10 @@
-
 import { Bot, Zap, BarChart3, Database, Brain, Cog, MessageCircle } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import LeadFormModal from "./LeadFormModal";
 
 const Services = () => {
-  const whatsappLink = "https://wa.me/5511999999999?text=Quero saber mais sobre os serviços da Astra Flow";
+  const whatsappLink = "https://wa.me/message/PQNKHCMYWWU4B1";
 
   const mainService = {
     icon: Bot,
@@ -94,13 +94,10 @@ const Services = () => {
                     <h3 className="text-2xl font-bold">{mainService.title}</h3>
                   </div>
                 </div>
-                <Button 
-                  className="bg-white text-primary hover:bg-gray-100"
-                  onClick={() => window.open(whatsappLink, '_blank')}
-                >
-                  <MessageCircle className="mr-2 h-4 w-4" />
-                  Quero Testar Grátis
-                </Button>
+                <LeadFormModal 
+                  triggerText="Quero Testar Grátis"
+                  buttonProps={{ className: "bg-white text-primary hover:bg-gray-100" }}
+                />
               </div>
             </div>
             
@@ -150,13 +147,10 @@ const Services = () => {
                     ))}
                   </div>
                   
-                  <Button 
-                    variant="outline" 
-                    className="w-full mt-6 border-primary text-primary hover:bg-primary hover:text-white"
-                    onClick={() => window.open(whatsappLink, '_blank')}
-                  >
-                    Solicitar Orçamento
-                  </Button>
+                  <LeadFormModal 
+                    triggerText="Solicitar Orçamento"
+                    buttonProps={{ variant: "outline", className: "w-full mt-6 border-primary text-primary hover:bg-primary hover:text-white" }}
+                  />
                 </CardContent>
               </Card>
             ))}

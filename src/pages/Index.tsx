@@ -1,9 +1,10 @@
-
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import ValueProposition from "@/components/ValueProposition";
+import WhatIsAstraFlow from "@/components/WhatIsAstraFlow";
+import HowItWorks from "@/components/HowItWorks";
+import ClientResults from "@/components/ClientResults";
 import AIAdvantages from "@/components/AIAdvantages";
-import Services from "@/components/Services";
+import ReduceCosts from "@/components/ReduceCosts";
 import CallToAction from "@/components/CallToAction";
 import WhatsAppCTA from "@/components/WhatsAppCTA";
 import Footer from "@/components/Footer";
@@ -13,9 +14,11 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <Header />
       <Hero />
-      <ValueProposition />
+      <WhatIsAstraFlow />
+      <HowItWorks />
+      <ClientResults />
       <AIAdvantages />
-      <Services />
+      <ReduceCosts />
       <CallToAction />
       <WhatsAppCTA />
       <Footer />

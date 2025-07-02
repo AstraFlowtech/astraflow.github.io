@@ -1,9 +1,9 @@
-
 import { ArrowRight, MessageCircle, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import LeadFormModal from "./LeadFormModal";
 
 const CallToAction = () => {
-  const whatsappLink = "https://wa.me/5511999999999?text=Quero uma consultoria gratuita com a Astra Flow";
+  const whatsappLink = "https://wa.me/message/PQNKHCMYWWU4B1";
 
   return (
     <section className="py-20 gradient-bg text-white relative overflow-hidden">
@@ -19,7 +19,7 @@ const CallToAction = () => {
           </div>
 
           <h2 className="text-3xl md:text-5xl font-bold mb-6">
-            Pronto para Revolucionar Seu Negócio?
+            Pronto para revolucionar seu negócio?
           </h2>
           
           <p className="text-xl md:text-2xl mb-8 opacity-90 max-w-3xl mx-auto">
@@ -45,15 +45,13 @@ const CallToAction = () => {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button 
-              size="lg" 
-              className="bg-white text-primary hover:bg-gray-100 text-lg px-8 py-4 font-bold pulse-glow"
-              onClick={() => window.open(whatsappLink, '_blank')}
-            >
-              <MessageCircle className="mr-2 h-5 w-5" />
-              Agendar Consultoria Grátis
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
+            <LeadFormModal 
+              triggerText="Agendar Consultoria Grátis"
+              buttonProps={{
+                size: "lg",
+                className: "bg-white text-primary hover:bg-gray-100 text-lg px-8 py-4 font-bold pulse-glow"
+              }}
+            />
             
             <div className="text-center sm:text-left">
               <div className="text-sm opacity-75">✅ Sem compromisso</div>
@@ -62,7 +60,7 @@ const CallToAction = () => {
           </div>
 
           <p className="text-sm opacity-75 mt-6">
-            Mais de 500 empresas já transformaram seus resultados conosco
+            Mais de 50 empresas já transformaram seus resultados conosco
           </p>
         </div>
       </div>
